@@ -1,9 +1,9 @@
-import './websiteDesign.scss';
-
+import Pokedex from './Content/Pokedex';
+import './Content/PokedexDesign.scss';
 function App() {
   return (
     <div className="App">
-      
+      <Pokedex />
     </div>
   );
 }
