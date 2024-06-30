@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Sum from './Sum';
-import Home from './Home';
+import Home from './Pages/Home';
+
 
 //Practice
 test('adds 1 + 2 to equal 3', () => {
@@ -13,5 +14,5 @@ test('renders image', () => {
     render (<Home div = {filePath}/>)
     const image = screen.getByAltText('pokemon ball');
      expect(image).toBeInTheDocument();
-     expect(image).toHaveAttribute('srcset');
+     expect(image).toHaveAttribute('src');
       });
