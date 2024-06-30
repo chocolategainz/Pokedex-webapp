@@ -1,9 +1,11 @@
 import React from 'react';
-
+import './pokeball.png';
 const Home = () => {
-<header>
-    <img src = './Pokemon Ball Cycles Four YES-INSTAGRAM.jpg' width = {250} alt = "pokemon ball"></img>
-</header>
-}
+    return (
+        <div className = "container">
+            <img srcset = './pokeball.png' alt = 'pokemon ball'></img>
+        </div>
+    )
+} 
 
 export default Home;
