@@ -4,7 +4,7 @@ import './Content/PokedexDesign.scss';
 function App() {
   return (
     <div className="App">
-      <Home />
+       <Home /> 
     </div>
   );
 }
