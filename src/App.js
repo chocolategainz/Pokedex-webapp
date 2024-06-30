@@ -1,9 +1,10 @@
-import Pokedex from './Content/Pokedex';
+import Home from './Home';
 import './Content/PokedexDesign.scss';
+
 function App() {
   return (
     <div className="App">
-      <Pokedex />
+      <Home />
     </div>
   );
 }
