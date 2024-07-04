@@ -5,11 +5,20 @@ nav a {
 }
 
 nav ul {
-    text-align: center;
+   
+    text-align: center;  
 }
 
 nav li {  
+    display: inline-block;
+font-weight:bold;
 list-style: none;
-display:inline-block;
 padding-inline: 10px 10px;
 }
+
+
+#pokeballLogo {
+max-width: 110px;
+}
+
+

@@ -2,16 +2,11 @@ import React from 'react';
 
 
 const Home = () => {
-    return (
-        <div className = "">
-           
-              <h1>Project Pokedex</h1>   
-          
-        
-            <img src = {require('./Pokemon-ball-image.jpg')} className = "pokeballLogo" alt = 'pokemon ball' width = {400}></img>
-           
-
-        </div>
+    return (  
+        <div class="container-md">
+            <h1>Project Pokedex</h1>
+        <img src = {require('./Pokemon-ball-image-removebg.jpg')} id = "pokeballLogo" alt = 'pokemon ball'></img>  
+         </div>
     );
 };
 
