@@ -1,19 +1,23 @@
 //Navigation Bar
 
-nav a {
+ a {
    text-decoration: none; 
 }
 
-nav ul {
-   
-    text-align: center;  
+.Nav .navbar-container {
+display:flex;
+justify-content: center;
+flex-wrap: nowrap;
+
 }
 
-nav li {  
-    display: inline-block;
+.nav-item {  
+//display: inline-block;
+text-align: center;  
 font-weight:bold;
 list-style: none;
-padding-inline: 10px 10px;
+//padding-inline: 10px 10px;
+
 }
 
 

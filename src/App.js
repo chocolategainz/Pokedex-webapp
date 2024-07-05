@@ -11,7 +11,6 @@ function App() {
 <div className = 'Nav'> 
   <Router>
 <header className = ''>
- 
   <Navbar />
 </header>
 <Routes>
