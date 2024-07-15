@@ -16,3 +16,6 @@ test('renders image', () => {
      expect(image).toBeInTheDocument();
      expect(image).toHaveAttribute('src');
       });
+
+      //Integrating Pokedex Api into my homepage
+      
