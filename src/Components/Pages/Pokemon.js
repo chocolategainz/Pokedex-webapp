@@ -36,11 +36,15 @@ P.getPokemonByName("pikachu")
 .catch(function(error){
         console.log(error);
     });
+
+    //Victini
+
     
 }, []);
 
     return (
 <div className = "container">
+    {/*Eevee*/}
 {pokemonData ? (
     <div>
         <h2>{pokemonData.name}</h2>
@@ -48,6 +52,7 @@ P.getPokemonByName("pikachu")
         <p>Height: {pokemonData.height}</p>
         <p>Weight: {pokemonData.weight}</p>
         <p>Base Experience: {pokemonData.base_experience}</p>
+        <p>Type: {pokemonData.types?.map(typeData => typeData.type.name).join()}</p>
         </div>
 ) : (
     <p>Loading...</p>
