@@ -3,7 +3,8 @@ import { Pokedex } from'pokeapi-js-wrapper';
 
 
 const Pokemon = () => {
-    const [pokemonData , setPokemonData] = useState(null);
+    const [pokemonData , setPokemonData] = useState(null); //Eevee Data
+    const [pikachuData , setPikachuData] = useState(null); //Pikachu Data
 
     useEffect(() => {
     const customOptions = {
@@ -16,16 +17,26 @@ const Pokemon = () => {
     };
 const P = new Pokedex(customOptions);  
 
+//Eevee Data
 P.getPokemonByName('eevee')
     .then(function(response) {
         console.log(response);
         setPokemonData(response);
     })
-
     .catch(function(error){
         console.log(error);
     });
 
+    //Pikachu Data
+P.getPokemonByName("pikachu")
+.then(function(response) {
+        console.log(response);
+        setPikachuData(response);
+      })
+.catch(function(error){
+        console.log(error);
+    });
+    
 }, []);
 
     return (
@@ -37,6 +48,20 @@ P.getPokemonByName('eevee')
         <p>Height: {pokemonData.height}</p>
         <p>Weight: {pokemonData.weight}</p>
         <p>Base Experience: {pokemonData.base_experience}</p>
+        </div>
+) : (
+    <p>Loading...</p>
+)}
+
+{/*Pikachu*/}
+
+{pokemonData ? (
+    <div>
+        <h2>{pikachuData.name}</h2>
+        <img src ={pikachuData.sprites.front_default} alt = {pikachuData.name} />
+        <p>Height: {pikachuData.height}</p>
+        <p>Weight: {pikachuData.weight}</p>
+        <p>Base Experience: {pikachuData.base_experience}</p>
         </div>
 ) : (
     <p>Loading...</p>
