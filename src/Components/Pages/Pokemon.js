@@ -13,6 +13,7 @@ const Pokemon = () => {
     const [axewData , setAxewData] = useState(null); //Axew Data
     const [aronData , setAronData] = useState(null); //Aron Data
     const [trapinchData , setTrapinchData] = useState(null);//Trapinch Data
+    const [chimcharData , setChimcharData] = useState(null);//Chimchar Data
 
     useEffect(() => {
     const customOptions = {
@@ -120,6 +121,16 @@ P.getPokemonByName("pikachu")
      .then(function(response) {
              console.log(response);
              setTrapinchData(response);
+           })
+     .catch(function(error){
+             console.log(error);
+         });
+
+             //Chimchar
+     P.getPokemonByName("chimchar")
+     .then(function(response) {
+             console.log(response);
+             setChimcharData(response);
            })
      .catch(function(error){
              console.log(error);
@@ -276,6 +287,22 @@ P.getPokemonByName("pikachu")
 ) : (
     <p>Loading...</p>
 )}
+
+{/*Chimchar*/}
+
+{chimcharData ? (
+    <div>
+        <h2>{chimcharData.name}</h2>
+        <img src ={chimcharData.sprites.front_default} alt = {chimcharData.name} />
+        <p>Height: {chimcharData.height}</p>
+        <p>Weight: {chimcharData.weight}</p>
+        <p>Base Experience: {chimcharData.base_experience}</p>
+        <p>Type: {chimcharData.types?.map(typeData => typeData.type.name).join()}</p>
+        </div>
+) : (
+    <p>Loading...</p>
+)}
+
 </div>
     );
 };
