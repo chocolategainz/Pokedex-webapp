@@ -13,7 +13,8 @@ const Pokemon = () => {
     const [axewData , setAxewData] = useState(null); //Axew Data
     const [aronData , setAronData] = useState(null); //Aron Data
     const [trapinchData , setTrapinchData] = useState(null);//Trapinch Data
-    const [chimcharData , setChimcharData] = useState(null);//Chimchar Data
+    const [chimcharData , setChimcharData] = useState(null); //Chimchar Data
+    const [deinoData , setDeinoData] = useState(null); //Deino Data
 
     useEffect(() => {
     const customOptions = {
@@ -131,6 +132,16 @@ P.getPokemonByName("pikachu")
      .then(function(response) {
              console.log(response);
              setChimcharData(response);
+           })
+     .catch(function(error){
+             console.log(error);
+         });
+
+            //Deino
+     P.getPokemonByName("deino")
+     .then(function(response) {
+             console.log(response);
+             setDeinoData(response);
            })
      .catch(function(error){
              console.log(error);
@@ -303,6 +314,20 @@ P.getPokemonByName("pikachu")
     <p>Loading...</p>
 )}
 
+{/*Deino*/}
+
+{deinoData ? (
+    <div>
+        <h2>{deinoData.name}</h2>
+        <img src ={deinoData.sprites.front_default} alt = {deinoData.name} />
+        <p>Height: {deinoData.height}</p>
+        <p>Weight: {deinoData.weight}</p>
+        <p>Base Experience: {deinoData.base_experience}</p>
+        <p>Type: {deinoData.types?.map(typeData => typeData.type.name).join(', ')}</p>
+        </div>
+) : (
+    <p>Loading...</p>
+)}
 </div>
     );
 };
